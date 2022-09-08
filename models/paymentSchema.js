@@ -9,6 +9,7 @@ const Payments = new mongoose.Schema({
   from: { type: String },
   to: { type: String },
   amount: { type: Number },
+  roomType:{ type:String }
 })
 
 module.exports = mongoose.model("Payments", Payments)

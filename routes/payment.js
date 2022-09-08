@@ -44,6 +44,7 @@ router.post("/success", async (req, res) => {
       fromDate,
       toDate,
       amount,
+      roomType
     } = req.body
     // Creating our own digest
     // The format should be like this:
@@ -72,6 +73,7 @@ router.post("/success", async (req, res) => {
       orderId: razorpayOrderId,
       paymentId: razorpayPaymentId,
       amount: amount / 100,
+      roomType:roomType
     })
     await payment.save()
 
